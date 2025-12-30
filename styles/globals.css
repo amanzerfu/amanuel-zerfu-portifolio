@@ -1,0 +1,121 @@
+:root {
+  --background: #0a0a0a;
+  --foreground: #fff;
+  --accent: #c9a227;
+  --muted: #ccc;
+  --card-bg: rgba(255,255,255,0.05);
+  --border-color: rgba(255,255,255,0.1);
+}
+
+[data-theme="light"] {
+  --background: #f8f8f8;
+  --foreground: #111;
+  --accent: #c9a227;
+  --muted: #555;
+  --card-bg: rgba(255,255,255,0.8);
+  --border-color: rgba(0,0,0,0.1);
+}
+
+/* Reset + globals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scroll */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Links */
+a {
+  color: #c9a227; /* gold */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Buttons */
+button {
+  background-color: #c9a227;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background-color: #e0be3e;
+}
+
+/* Card styles */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 201, 39, 0.3);
+}
+
+/* Gamification animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Section headings */
+h1, h2, h3 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+/* Sections */
+section {
+  margin-bottom: 8rem;
+}
