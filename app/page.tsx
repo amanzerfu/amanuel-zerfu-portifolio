@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Routes from "./hooks/ui/routes";
+import AppRoutes from "./hooks/ui/routes";
 
 export default function Home() {
   const router = useRouter();
@@ -48,7 +48,7 @@ export default function Home() {
 
       <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", justifyContent: "center" }}>
         <button
-          onClick={() => router.push(Routes.CONTACT)}
+          onClick={() => router.push(AppRoutes.CONTACT)}
           style={{
             padding: "1rem 2.5rem",
             fontSize: "1.2rem",
@@ -72,7 +72,7 @@ export default function Home() {
         </button>
 
         <button
-          onClick={() => router.push(Routes.PROJECTS)}
+          onClick={() => router.push(AppRoutes.PROJECTS)}
           style={{
             padding: "1rem 2.5rem",
             fontSize: "1.2rem",
