@@ -2,6 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import AppRoutes from "./hooks/ui/routes";
+import CompanySlider from "./components/ui/CompanySlider";
+import CONTACT_OPTION from "./hooks/ui/sociallinks";
+import SkillSlider from "./components/ui/SkillSlider";
 
 export default function Home() {
   const router = useRouter();
@@ -32,7 +35,7 @@ export default function Home() {
           lineHeight: "1.2",
         }}
       >
-        Amanuel Zerfu
+        {CONTACT_OPTION.NAME}
       </h1>
 
       <p
@@ -43,7 +46,7 @@ export default function Home() {
           marginBottom: "2rem",
         }}
       >
-        Senior Android & Backend Engineer
+        {CONTACT_OPTION.TITLE}
       </p>
 
       <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", justifyContent: "center" }}>
@@ -95,9 +98,13 @@ export default function Home() {
         >
           View Projects
         </button>
+
       </div>
 
-      {/* Professional footer-style copyright */}
+
+<div style={{ width: "100%", marginTop: "3rem" }}>
+  <SkillSlider />
+</div>
     </main>
   );
 }

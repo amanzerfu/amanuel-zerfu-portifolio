@@ -2,6 +2,7 @@
 
 import { useTheme } from "@/app/providers/theme-provider";
 import Routes from "@/app/hooks/ui/routes";
+import CONTACT_OPTION from "@/app/hooks/ui/sociallinks";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -32,8 +33,10 @@ export default function Navbar() {
           cursor: "pointer",
         }}
       >
-        Amanuel Zerfu
+        {CONTACT_OPTION.NAME.toLocaleUpperCase()}
+        
       </span>
+      
 
       {/* Navigation Links */}
       <div
@@ -77,6 +80,39 @@ export default function Navbar() {
             />
           </a>
         ))}
+
+
+        <a
+        className="cv-pulse"
+  href={CONTACT_OPTION.CV_LINK}
+  download
+  style={{
+    padding: "0.45rem 1.1rem",
+    borderRadius: "10px",
+    border: "1px solid var(--accent)",
+    color: "var(--accent)",
+    fontWeight: 600,
+    fontSize: "0.9rem",
+    textDecoration: "none",
+    transition: "all 0.3s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.background = "var(--accent)";
+    e.currentTarget.style.color = "#000";
+    e.currentTarget.style.transform = "translateY(-2px)";
+    e.currentTarget.style.boxShadow =
+      "0 8px 20px rgba(201,162,39,0.4)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.background = "transparent";
+    e.currentTarget.style.color = "var(--accent)";
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+  Download CV
+</a>
+
 
         {/* Theme Toggle */}
         <button

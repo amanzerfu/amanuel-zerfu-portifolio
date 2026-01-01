@@ -11,7 +11,6 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-
       <BrowserRouter>
         <Routes>
           <Route path={AppRoutes.HOME} element={<Home />} />
